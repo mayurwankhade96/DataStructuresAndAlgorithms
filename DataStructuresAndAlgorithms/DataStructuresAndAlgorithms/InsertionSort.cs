@@ -6,6 +6,10 @@ namespace DataStructuresAndAlgorithms
 {
     class InsertionSort
     {
+        /// <summary>
+        /// Method to sort string
+        /// </summary>
+        /// <param name="array"></param>
         public void InsSort(string[] array)
         {
             for (int i = 1; i <= array.Length - 1; i++) // Loop for passes
@@ -21,6 +25,11 @@ namespace DataStructuresAndAlgorithms
                 array[j + 1] = key;
             }
         }
+
+        /// <summary>
+        /// Method to print string array
+        /// </summary>
+        /// <param name="array"></param>
         public void ToPrint(string[] array)
         {
             for (int i = 0; i < array.Length; i++)
