@@ -6,23 +6,22 @@ namespace DataStructuresAndAlgorithms
 {
     class BubbleSort
     {
-        public int temp;
-        public int[] array = { 12, 25, 9, 34, 21, 17, 29 };
+        public int temp;        
 
         /// <summary>
         /// Method to sort array
         /// </summary>
-        public void Sort()
+        public void Sort(int[] arr)
         {
-            for (int i = 0; i < array.Length - 1; i++) // For number of pass 
+            for (int i = 0; i < arr.Length - 1; i++) // For number of pass 
             {
-                for (int j = 0; j < array.Length - 1 - i; j++) // For comparison in each pass
+                for (int j = 0; j < arr.Length - 1 - i; j++) // For comparison in each pass
                 {
-                    if (array[j] > array[j + 1])
+                    if (arr[j] > arr[j + 1])
                     {
-                        temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
+                        temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
                     }
                 }
             }
@@ -31,11 +30,11 @@ namespace DataStructuresAndAlgorithms
         /// <summary>
         /// Method to print array
         /// </summary>
-        public void ToPrint()
+        public void ToPrint(int[] arr)
         {
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine(array[i]);
+                Console.Write(arr[i] + " ");
             }
         }
     }
