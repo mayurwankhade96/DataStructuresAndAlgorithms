@@ -6,7 +6,7 @@ namespace DataStructuresAndAlgorithms
 {
     class BubbleSort
     {
-        public int temp;        
+        public int temp;
 
         /// <summary>
         /// Method to sort array

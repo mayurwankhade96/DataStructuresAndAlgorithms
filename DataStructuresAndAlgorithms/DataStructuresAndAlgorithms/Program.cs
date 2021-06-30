@@ -10,13 +10,24 @@ namespace DataStructuresAndAlgorithms
             do
             {
                 Console.WriteLine("***Welcome to Data Structures and Algorithms Practice Problems!***" + "\n");
-                Console.WriteLine("Press 3. For Insertion Sort");
-                Console.WriteLine("Press 4. For Bubble Sort");
+                Console.WriteLine("Press 1. For Binary Search");
+                Console.WriteLine("Press 2. For Insertion Sort");
+                Console.WriteLine("Press 3. For Bubble Sort");
                 programNumber = Convert.ToInt32(Console.ReadLine());
 
                 switch (programNumber)
                 {
-                    case 3:
+                    case 1:
+                        string[] words = { "Sam", "Mayur", "John", "Charlie", "Harshal", "Terisa" };
+                        Array.Sort(words);                        
+
+                        Search search = new Search();
+                        search.PrintArray(words);
+                        int index = search.BinarySearch(words, "Mayur");
+                        Console.WriteLine("\n" + "Index of your word : " + index);
+                        break;
+
+                    case 2:
                         string[] array = { "Rob", "Mark", "John", "Mary", "Shaun" };
                         InsertionSort I = new InsertionSort();
                         Console.WriteLine("Before Sorting :");
@@ -27,7 +38,7 @@ namespace DataStructuresAndAlgorithms
                         Console.ReadLine();
                         break;
 
-                    case 4:
+                    case 3:
                         int[] arr = { 12, 25, 9, 34, 21, 17, 29 };
                         BubbleSort B = new BubbleSort();
                         Console.WriteLine("Before Sorting :");
@@ -42,7 +53,7 @@ namespace DataStructuresAndAlgorithms
                         Console.WriteLine("Invalid Input! Please enter a valid choice..." + "\n");
                         break;
                 }
-            } while (programNumber != 3 && programNumber != 4);
+            } while (programNumber <= 0 || programNumber > 3);
         }
     }
 }
